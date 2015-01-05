@@ -17,9 +17,14 @@
             return !string.IsNullOrEmpty(value);
         }
 
-        public static bool IsNOtNullOrWhiteSpace(this string value)
+        public static bool IsNotNullOrWhiteSpace(this string value)
         {
             return !string.IsNullOrWhiteSpace(value);
+        }
+
+        public static string Join(this string[] values, string separator)
+        {
+            return string.Join(separator, values);
         }
     }
 }
