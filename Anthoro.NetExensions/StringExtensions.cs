@@ -1,4 +1,6 @@
-﻿namespace Anthoro.NetExensions
+﻿using System.Collections.Generic;
+
+namespace Anthoro.NetExensions
 {
     public static class StringExtensions
     {
@@ -23,6 +25,11 @@
         }
 
         public static string Join(this string[] values, string separator)
+        {
+            return string.Join(separator, values);
+        }
+
+        public static string Join(this IEnumerable<string> values, string separator)
         {
             return string.Join(separator, values);
         }
